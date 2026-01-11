@@ -61,6 +61,7 @@ selected_location = st.selectbox(
 inputs["Neighborhood"] = neighborhood_mapping[selected_location]
 
 df = pd.DataFrame([inputs])
+df = df.reindex(columns=columns, fill_value=0)
 prediction = model.predict(df)[0]
 
 st.success(f"💰 Prediksi Harga Rumah: {prediction:,.2f}")
