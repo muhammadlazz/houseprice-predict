@@ -2,8 +2,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-model = joblib.load("house_price_model.pkl")
-columns = joblib.load("feature_columns.pkl")
+model = joblib.load("random_forest_model.joblib")
+columns = joblib.load("feature_columns.joblib")
 
 st.title("Predict House Price")
 
